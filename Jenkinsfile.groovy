@@ -4,7 +4,7 @@ node{
         sh "echo Parameter added"
     }
     stage("Install git"){
-        sh "ssh ec2-user@${ENVIR}sudo yum install git python-pip -y"
+        sh "ssh ec2-user@${ENVIR} sudo yum install git python-pip -y"
     }
     stage("Pull Repo"){
         sh "ssh ec2-user@${ENVIR} git https://github.com/chaglare/flask-examples.git"
