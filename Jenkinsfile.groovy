@@ -7,7 +7,7 @@ node{
         sh "ssh ec2-user@${ENVIR} sudo yum install git python-pip -y"
     }
     stage("Pull Repo"){
-        sh "ssh ec2-user@${ENVIR} git https://github.com/chaglare/flask-examples.git"
+        sh "ssh ec2-user@${ENVIR} git clone https://github.com/chaglare/flask-examples.git"
     }
     stage("Install Requirements"){
         //sh "virtualenv /tmp/venv"
